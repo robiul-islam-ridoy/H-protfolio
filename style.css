@@ -1,0 +1,81 @@
+/*=======================
+	CountDown CSS
+=========================*/
+#countdown {
+	background-image: url(http://via.placeholder.com/1500x800);
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	padding:70px 0 100px;
+}
+#countdown::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+    color: #000;
+	opacity: 0.6;
+	content: "";
+}
+#countdown .single-count {
+	margin-top:30px;
+	color: #000;
+	font-size: 15px;
+	text-align: center;
+}
+#countdown h2 {
+	color: #000;
+	font-size: 36px;
+	font-weight: 700;
+	position: relative;
+	margin: 20px 0;
+}
+#countdown .single-count i {
+	width: 90px;
+	height: 90px;
+	line-height: 90px;
+	border-radius: 100%;
+	font-size: 36px;
+	position: relative;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+#countdown .single-count:hover i{
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	transform:rotate(360deg);
+}
+#countdown .single-count i:after {
+	content:"";
+	position:absolute;
+	left:0px;
+	top:0px;
+	height:100%;
+	width:100%;
+	border:3px solid transparent;
+	border-radius:100%;
+	-webkit-transform:scale(0.80);
+	transform:scale(0.80);
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+	opacity:0
+}
+#countdown .single-count:hover i:after,
+#countdown .single-count.active i:after{
+	-webkit-transform:scale(1.5);
+	transform:scale(1.2);
+	opacity:1;
+}
+#countdown .single-count p {
+	font-size: 15px;
+	color: #000;
+	text-transform: uppercase;
+}
+/*=======================
+	End CountDown
+=========================*/
